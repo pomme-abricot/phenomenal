@@ -23,7 +23,7 @@ from ..object import VoxelGrid
 # ==============================================================================
 
 
-def _path_images(plant_number=1, dtype="bin"):
+def _path_images(plant_number=1, dtype="raw"):
     """ According to the plant number return a dict[id_camera][angle] containing
     filename of file.
 
@@ -38,9 +38,11 @@ def _path_images(plant_number=1, dtype="bin"):
     d : dict of dict of string
         dict[id_camera][angle] = filename
     """
-    data_directory = pkg_resources.resource_filename(
-        'openalea.phenomenal', 'data/plant_{}/{}/'.format(
-            plant_number, dtype))
+    # data_directory = pkg_resources.resource_filename(
+    #     'openalea.phenomenal', 'data/plant_{}/{}/'.format(
+    #         plant_number, dtype))
+
+    data_directory = "/mnt/plant_6/raw/"
 
     d = collections.defaultdict(dict)
     for id_camera in ["side", "top"]:
@@ -168,9 +170,10 @@ def calibrations(plant_number=1):
     :param plant_number: number of the plant desired (int)
     :return: dict[id_camera] of camera calibration object
     """
-    data_directory = pkg_resources.resource_filename(
-        'openalea.phenomenal', 'data/plant_{}/calibration/'.format(
-            plant_number))
+    # data_directory = pkg_resources.resource_filename(
+    #     'openalea.phenomenal', 'data/plant_{}/calibration/'.format(
+    #         plant_number))
+    data_directory = "/mnt/plant_6/calibration/"
 
     calibration = dict()
     for id_camera in ["side", "top"]:
@@ -211,8 +214,9 @@ def tutorial_data_binarization_mask():
     :return: list of image
     """
 
-    data_directory = pkg_resources.resource_filename(
-        'openalea.phenomenal', 'data/plant_6/mask/')
+    # data_directory = pkg_resources.resource_filename(
+    #     'openalea.phenomenal', 'data/plant_6/mask/')
+    data_directory = "/mnt/plant_6/mask/"
 
     masks = list()
     for filename in ["mask_hsv.png",
