@@ -173,7 +173,7 @@ def calibrations(plant_number=1):
     # data_directory = pkg_resources.resource_filename(
     #     'openalea.phenomenal', 'data/plant_{}/calibration/'.format(
     #         plant_number))
-    data_directory = "/home/ubuntu/data/mydatalocal/openalea/plant_6/calibration/"
+    data_directory = "/home/ubuntu/data/mydatalocal/plant_6/calibration/"
 
     calibration = dict()
     for id_camera in ["side", "top"]:
@@ -216,7 +216,7 @@ def tutorial_data_binarization_mask():
 
     # data_directory = pkg_resources.resource_filename(
     #     'openalea.phenomenal', 'data/plant_6/mask/')
-    data_directory = "/home/ubuntu/data/mydatalocal/openalea/plant_6/mask/"
+    data_directory = "/home/ubuntu/data/mydatalocal/plant_6/mask/"
 
     masks = list()
     for filename in ["mask_hsv.png",
