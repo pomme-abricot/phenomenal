@@ -42,7 +42,7 @@ def _path_images(plant_number=1, dtype="raw"):
     #     'openalea.phenomenal', 'data/plant_{}/{}/'.format(
     #         plant_number, dtype))
 
-    data_directory = "/home/ubuntu/data/mydatalocal/openalea/plant_6/raw/"
+    data_directory = "/home/ubuntu/data/mydatalocal/plant_6/raw/"
 
     d = collections.defaultdict(dict)
     for id_camera in ["side", "top"]:
